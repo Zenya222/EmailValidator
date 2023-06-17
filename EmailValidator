@@ -1,0 +1,14 @@
+# EmailValidator - Simple Python program to validate an email address
+
+import re
+
+def validate_email(email):
+    pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+    return re.match(pattern, email) is not None
+
+# Validate an email address
+input_email = "example@example.com"
+if validate_email(input_email):
+    print(f"{input_email} is a valid email address!")
+else:
+    print(f"{input_email} is not a valid email address.")
